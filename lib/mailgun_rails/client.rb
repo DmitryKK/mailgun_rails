@@ -3,7 +3,8 @@ require 'rest_client'
 
 module MailgunRails
   class Client
-    attr_reader :api_key, :domain, :verify_ssl
+    attr_reader :api_key, :verify_ssl
+    attr_accessor :domain
 
     def initialize(api_key, domain, verify_ssl = true)
       @api_key = api_key
